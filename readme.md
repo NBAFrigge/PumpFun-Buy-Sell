@@ -29,20 +29,18 @@ import (
     "github.com/frigge/pump"
     solana "github.com/gagliardetto/solana-go"
 )
-func main() {
-	client := rpc.New("RPC-URL")
 
-	coinToBuy := Coin{}
-	coinToBuy.SetBuyAmount(0.02) //In Sol
-	coinToBuy.SetSlippage(0.6)  //0.0 - 1.0
-	coinToBuy.SetMintAddress(MintAddress) //Coin mint address
+coinToBuy := Coin{}
+coinToBuy.SetBuyAmount(0.02) //In Sol
+coinToBuy.SetSlippage(0.6)  //0.0 - 1.0
+coinToBuy.SetMintAddress(MintAddress) //Coin mint address
 ```
 
 ### Buying Tokens
 
 ```go
 // Setup RPC client
-client := rpc.New(rpc.DevNet_RPC)
+client := rpc.New(YourRpcUrl)
 
 // Execute purchase
 signature, err := coin.Buy(client, YourPrivateKey)
