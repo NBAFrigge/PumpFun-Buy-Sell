@@ -213,7 +213,7 @@ func (c *Coin) Buy(client rpc.Client, Owner solana.PrivateKey) (solana.Signature
 	tx.Sign(privateKeyGetter)
 
 	opts := rpc.TransactionOpts{
-		SkipPreflight:       false,
+		SkipPreflight:       true,
 		PreflightCommitment: rpc.CommitmentFinalized,
 	}
 

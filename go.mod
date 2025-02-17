@@ -1,4 +1,4 @@
-module pump
+module github.com/frigge/pump
 
 go 1.23.3
 
